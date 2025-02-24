@@ -35,5 +35,4 @@ $params = "--tsource C: --tdest C:\kape-da\kape-%d-%m --target !SANS_Triage,Kape
 Start-Process -FilePath $command -ArgumentList $params -Wait
 
 # Clean up files
-Remove-Item $extractPath -Recurse
 Remove-Item $zipFilePath
