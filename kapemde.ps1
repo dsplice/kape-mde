@@ -3,7 +3,7 @@
 # Edited by Derek Armstrong 20250222 - Added free size checking, debug mode
 
 $zipFilePath = "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\kape.zip"
-$extractPath = "C:\temp"
+$extractPath = "C:\temp\kape"
 
 # Check if there are at least 20 GB free on C drive.  Exit if not
 $thresholdGB = 20 
@@ -30,6 +30,6 @@ while ($destination.Items().Count -ne $zipFile.Items().Count) {
 }
 
 # Execute the kape.exe with the given parameters
-$command = "C:\temp\kape.exe"
+$command = "C:\temp\kape\kape.exe"
 $params = "--tsource C: --tdest C:\Temp\%d%m --target !SANS_Triage,KapeTriage --zip kapeoutput --debug"
 Start-Process -FilePath $command -ArgumentList $params -Wait
