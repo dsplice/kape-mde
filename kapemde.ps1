@@ -15,7 +15,7 @@ if ($freeSpace -lt $thresholdGB) {
 
 # Check if the extraction directory exists, if not, create it
 if (-not (Test-Path -Path $extractPath -PathType Container)) {
-    New-Item -ItemType Directory -Path $extractPath -Force | Out-Null
+    New-Item -Path $extractPath -ItemType Directory -Force | Out-Null
 }
 
 # Unzip the file using the built-in ComObject Shell.Application
