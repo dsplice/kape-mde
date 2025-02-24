@@ -1,12 +1,12 @@
 # Remote collection of Windows Forensic Artifacts using KAPE and Microsoft Defender for Endpoint.
 # https://medium.com/@DFIRanjith/remote-collection-of-windows-forensic-artifacts-using-kape-and-microsoft-defender-for-endpoint-f7d3a857e2e0
-# Edited by Derek Armstrong 20250222 - Added free size checking, debug mode
+# Edited by Derek Armstrong 20250223
 
 $zipFilePath = "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\kape.zip"
 $extractPath = "C:\temp\kape"
 
-# Check if there are at least 20 GB free on C drive.  Exit if not
-$thresholdGB = 20 
+# Check if there are at least 40 GB free on C drive.  Exit if not
+$thresholdGB = 40 
 $freeSpace = (Get-PSDrive -Name C).Free / 1GB
 if ($freeSpace -lt $thresholdGB) {
     Write-Host "Error: Not enough free space on C: drive. Available: $([math]::round($freeSpace, 2)) GB, Required: $thresholdGB GB"
@@ -31,7 +31,7 @@ while ($destination.Items().Count -ne $zipFile.Items().Count) {
 
 # Execute the kape.exe with the given parameters
 $command = "C:\temp\kape\kape.exe"
-$params = "--tsource C: --tdest C:\Temp\kape-%d-%m --target !SANS_Triage,KapeTriage --zip kapeoutput --debug"
+$params = "--tsource C: --tdest C:\Temp\kape-%d-%m --target !SANS_Triage,KapeTriage --zip kapeoutput-%m --debug"
 Start-Process -FilePath $command -ArgumentList $params -Wait
 
 # Clean up files
