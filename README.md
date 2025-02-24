@@ -10,7 +10,6 @@ Notes from:  https://medium.com/@DFIRanjith/remote-collection-of-windows-forensi
 
 ## To collect triage package
 - Connect to the remote machine using Live Response in MDE
-- Upload both kape.exe and kapemde.ps1 to the MDE library (overwrite if necessary)
 - Upload the kape.zip file to the remote machine using put (putfile kape.zip -overwrite)
 - Run kapemde.ps1 via Live Response (run kapemde.ps1)
 - Change directory into the kape output folder (eg cd C:\kape-da\kape-20250224T153141-{machinename})
