@@ -14,7 +14,7 @@ if ($freeSpace -lt $thresholdGB) {
 }
 
 # Create the extraction directory
-New-Item -Path $extractPath -ItemType Directory -Force
+New-Item -Path $extractPath -ItemType Directory
 
 # Unzip the file using the built-in ComObject Shell.Application
 $shell = New-Object -ComObject Shell.Application
