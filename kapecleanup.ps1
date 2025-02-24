@@ -9,6 +9,6 @@ if (Test-Path -Path $extractPath -PathType Container) {
 }
 
 # Check if the zip file exists, if exists, delete it
-if (Test-Path $zipFilePath) {
+if (Test-Path $zipFilePath -PathType leaf) {
    Remove-Item $zipFilePath
 }
