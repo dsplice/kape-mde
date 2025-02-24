@@ -33,3 +33,7 @@ while ($destination.Items().Count -ne $zipFile.Items().Count) {
 $command = "C:\temp\kape\kape.exe"
 $params = "--tsource C: --tdest C:\Temp\kape-%d-%m --target !SANS_Triage,KapeTriage --zip kapeoutput --debug"
 Start-Process -FilePath $command -ArgumentList $params -Wait
+
+# Clean up files
+Remove-Item $extractPath -Recurse
+Remove-Item $zipFilePath
