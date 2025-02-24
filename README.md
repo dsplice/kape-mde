@@ -15,4 +15,4 @@ Notes from:  https://medium.com/@DFIRanjith/remote-collection-of-windows-forensi
 - Change directory into the kape output folder (eg cd C:\kape-da\kape-20250224T153141-{machinename})
 - Get ConsoleLog (eg getfile 2025-02-24T15_31_41_4683858_ConsoleLog.txt)
 - Get the triage file (eg getfile 2025-02-24T162604_kapeoutput-M783731.zip)
-- Once done, clean up the triage files manually (smb share etc)
+- Once done, clean up the triage files manually (smb share etc, eg c:\kape-da)
