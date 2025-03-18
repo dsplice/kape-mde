@@ -16,4 +16,4 @@ Notes from:  https://medium.com/@DFIRanjith/remote-collection-of-windows-forensi
 - Get ConsoleLog (eg getfile 2025-02-24T15_31_41_4683858_ConsoleLog.txt)
 - Get the triage file (eg getfile 2025-02-24T162604_kapeoutput-M783731.zip)
   - If file is larger than 3 GB, or transfer times out, copy file manually (eg smb share)
-- Run kapecleanup.ps1
+- Cleanup files (run kapecleanup.ps1)
