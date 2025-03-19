@@ -31,7 +31,7 @@ while ($destination.Items().Count -ne $zipFile.Items().Count) {
 
 # Execute the kape.exe with the given parameters
 $command = "C:\kape-da\kape.exe"
-$params = "--tsource C: --tdest C:\kape-da\kape-%d-%m --target !SANS_Triage,KapeTriage --zip kapeoutput-%m --debug"
+$params = "--tsource C: --tdest C:\kape-da\kape-%d-%m --target CombinedLogs,KapeTriage,MessagingClients,ProgramExecution,RemoteAdmin,BITS,WindowsFirewall --zip kapeoutput-%m --debug"
 Start-Process -FilePath $command -ArgumentList $params -Wait
 
 # Clean up files
