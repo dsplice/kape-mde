@@ -5,7 +5,7 @@ Taken from:  https://github.com/DFIRanjith/Scripts/blob/main/kape.ps1
 Notes from:  https://medium.com/@DFIRanjith/remote-collection-of-windows-forensic-artifacts-using-kape-and-microsoft-defender-for-endpoint-f7d3a857e2e0
 
 
-## One Time Step
+## One Time Steps
 - Create kape.zip (just kape.exe, and the target folder. Have the zip with the exe and folder in the root of the zip, not in a KAPE subdirectory or such)
 - Upload kape.zip, kapemde.ps1, and kapecleanup.ps1 to the MDE library (overwrite if necessary)
 
