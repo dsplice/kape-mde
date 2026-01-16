@@ -1,7 +1,7 @@
 # Cleanup of Kape and artifacts
 
 $zipFilePath = "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\kape.zip"
-$extractPath = "C:\kape-da"
+$extractPath = "C:\Windows\Temp\kape-da"
 
 # Check if the extraction directory exists, if exists, delete it
 if (Test-Path -Path $extractPath -PathType Container) {
